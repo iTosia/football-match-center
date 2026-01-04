@@ -1,11 +1,17 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import dotenv from "dotenv";
+import { connectDB } from "./config/db";
+import matchRoutes from "./routes/matchRoutes";
+
+dotenv.config();
+connectDB();
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Football Match Center backend (TypeScript) is running!" });
-});
+app.use("/api/matches", matchRoutes);
+
+const PORT = process.env.PORT || 9000;
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
