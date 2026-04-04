@@ -1,7 +1,7 @@
-import MatchList from "./components/MatchList";
+import TeamCard from "./components/TeamCard";
 
 function App() {
-  return <MatchList />;
+  return <TeamCard />;
 }
 
 export default App;

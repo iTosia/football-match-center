@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+import cors from "cors";
 import express from "express";
 import { connectDB } from "./config/db";
 import matchRoutes from "./routes/matchRoutes";
@@ -10,6 +11,7 @@ connectDB();
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.use("/api/matches", matchRoutes);
 app.use("/api/external", externalTeamRoutes);
