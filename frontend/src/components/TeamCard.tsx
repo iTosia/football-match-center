@@ -12,10 +12,15 @@ export default function TeamCard() {
 
   return (
     <div>
-      <h2>{team.name}</h2>
+      <h2>Team name: {team.name}</h2>
       <img src={team.logo} alt={team.name} width={100} />
-      <p>{team.country}</p>
-      <p>{team.stadium.name} ({team.stadium.city})</p>
+      <p>Short name: {team.code}</p>
+      <p>Country: {team.country}</p>
+      <p>Founded: {team.founded}</p>
+      <p>Stadium: {team.stadium.name}</p>
+      <p>Stadium city: {team.stadium.city}</p>
+      <p>Stadium capacity: {team.stadium.capacity}</p>
+      <p>Stadium surface: {team.stadium.surface}</p>
     </div>
   );
 }
