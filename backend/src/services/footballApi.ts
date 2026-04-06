@@ -16,3 +16,13 @@ export const getTeamById = async (teamId: number) => {
 
   return response.data;
 };
+
+export const getApiStatus = async () => {
+  try {
+    const response = await api.get("/status");
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching API status:", error);
+    throw error;
+  }
+};
