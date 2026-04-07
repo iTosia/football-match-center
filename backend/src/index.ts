@@ -8,7 +8,7 @@ import matchRoutes from "./routes/matchRoutes";
 import externalTeamRoutes from "./routes/externalTeamRoutes";
 import statusRoutes from "./routes/statusRoutes";
 
-connectDB();
+// connectDB();
 
 const app = express();
 app.use(express.json());
