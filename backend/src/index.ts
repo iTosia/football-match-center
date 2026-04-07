@@ -8,6 +8,7 @@ import matchRoutes from "./routes/matchRoutes";
 import externalTeamRoutes from "./routes/externalTeamRoutes";
 import statusRoutes from "./routes/statusRoutes";
 
+// TODO: connect the real db when we need to store user data or cache API responses. For now, we can keep it simple and focus on the core functionality of fetching and displaying football match data.
 // connectDB();
 
 const app = express();
