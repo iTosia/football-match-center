@@ -17,6 +17,12 @@ export const getTeam = async (req: Request, res: Response) => {
 
     const [teamData] = data.response;
 
+    if (!teamData || !teamData.team || !teamData.venue) {
+      return res.status(404).json({
+        message: "Invalid team data structure from external API",
+      });
+    }
+
     const mappedData = {
       id: teamData.team.id,
       name: teamData.team.name,
